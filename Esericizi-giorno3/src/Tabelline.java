@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class EsercizioTabelline {
+public class Tabelline {
 
     /*
     Scrivete una funzione che dato in input due numeri n ed m,
@@ -9,7 +9,7 @@ public class EsercizioTabelline {
 
     public static int[] tabelline(int m, int n){
         int[] array1 = new int[m];
-        for(int i = 0; i < array1.length; i++){
+        for(int i = 0; i < m ; i++){
             array1[i] = i * n;
         }
         return array1;
@@ -18,6 +18,7 @@ public class EsercizioTabelline {
     public static void main (String[] args){
         int[] outputArray1 = tabelline(11, 2);
         System.out.println(Arrays.toString(outputArray1));
+//      System.out.println(Arrays.toString(tabelline(11, 2)));
     }
 
 }
