@@ -18,6 +18,7 @@ public class Anagramma2 {
                     arrayB[j] = '='; //elimino il carattere dove c'è corrispondenza
                     match = true;
                     break;
+
                 }
             }
             if(match == false){
