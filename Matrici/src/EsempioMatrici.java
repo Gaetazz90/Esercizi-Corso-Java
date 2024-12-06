@@ -33,7 +33,35 @@ public class EsempioMatrici {
                         {12,15,18},
                         {21,24,27}
                 };
+        System.out.println(Arrays.deepToString(matrice1));
         funzioneMatrice(matrice1);
         stampaMatriceQuadrata(matrice1);
     }
 }
+
+/*
+Per stampare l'array bidimnesionale ho diversi modi come visto sopra:
+1. mi faccio 2 cicli for e stampo quindi ogni elemento(quindi uno sotto l'altro)
+    3
+    6
+    9
+    12
+    15
+    18
+    21
+    24
+    27
+2. mi faccio 1 solo ciclo for(quindi solo l'array globale) e lo stampo con il metodo Arrays.toString
+    [3, 6, 9]
+    [12, 15, 18]
+    [21, 24, 27]
+    2.1 se voglio ottenere un outuput più organizzato fai come vedi sopra
+    [
+    [3, 6, 9],
+    [12, 15, 18],
+    [21, 24, 27],
+    ]
+3. usa il metodo Arrays.deepToString - VALE SOLO PER GLI ARRAY BIDIMENSIONALI
+   che stampa direttamente tutto l'array di array.
+    [3, 6, 9], [12, 15, 18], [21, 24, 27]]
+ */
