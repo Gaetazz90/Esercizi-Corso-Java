@@ -17,7 +17,8 @@ public class Fibonacci {
      */
 
     //N è praticamente l'indice del numero della successione di Fib che voglio trovare...
-    //dato che la sequenza è infinita, N sarà la lunghezza del mio array...cioè la fine della sequenza
+    //dato che la sequenza è infinita, N + 1 sarà la lunghezza del mio array...
+    //
     public static int fibonacci(int n){
         if(n < 0){
             System.out.println("Errore: la sequenza di Fibonacci parte da 0!");
