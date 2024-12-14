@@ -1,0 +1,27 @@
+//NOTA GENERICA PER GLI ARRAY
+METODO PER AGGIUNGERE NUOVI ELEMENTI A UN ARRAY
+
+(cosa che normalmente non si può fare perchè gli array hanno dimensione fissa,
+per la questione delle cellette di memoria, ovvero delle posizione che occupano nella memoria del pc)
+
+TECNICAMENTE NON STAI ALLUGANDO L'ARRAY ESISTENTE, PERCHè GLI ARRAY NON SONO MODIFICABILI APPUNTO...
+E IN GENERALE USERAI LE LISTE(ARRAYLIST) PER QUESTI SCOPI....
+
+QUINDI IL METODO è DI CREARE UN NUOVO ARRAY OGNI VOLTA CHE VUOI AGGIUNGERE UN NUOVO ELEMENTO...
+E IL NUOVO ARRAY SARà PARI ALLA LUNGHEZZA DEL PRECEDENTE + 1.
+POI OVVIAMENTE LO CICLI E CI INSERISCI PRIMA TUTTI GLI ELEMENTI VECCHI.
+E INFINE TI AGGIUNGI IL NUOVO ELEMENTO.
+QUINDI IL CODICE SARà:
+
+public static Elemento[] addElemento(Elemento[] arrayPrecedente, Elemento nuovoElemento) {
+
+        Elemento[] nuovoArray = new Elemento[arrayPrecedente.length+1];
+
+        for (int i = 0; i < arrayPrecedente.length; i++) {
+            nuovoArray[i] = arrayPrecedente[i];
+        }
+
+        nuovoArray[nuovoArray.length-1] = nuovoElemento;
+
+        return nuovoArray;
+}

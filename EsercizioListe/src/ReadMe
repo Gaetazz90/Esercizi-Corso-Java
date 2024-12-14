@@ -1,0 +1,27 @@
+
+LOGICA LIFO: LAST IN -FIRST OUT ---> PILA / STACK
+l'ultimo elemento da aggiungere alla lista sarà posizionato in cima alla lista --> addFirst
+e sarà quindi il primo a essere rimosso...sempre dall'inizio della lista --> removeFirst
+quindi l'ultimo a entrare è il primo ad uscire(o il primo che entra è l'ultimo che esce)
+
+
+LOGICA FIFO: FIRST IN - FIRST ---> CODA / QUEUE
+l'ultimo elemento da aggiungere alla lista verrà posizionato alla fine della lista --> addLast
+e sarà quindi l'ultimo a essere rimosso dall'inizio della lista --> removeFirst
+quindi l'ultimo ad entrare è l'ultimo ad uscire(o il primo che entra è il primo che esce)
+
+
+//ESERCIZIO 1
+Progettate una classe ListaLinkata generica
+
+Ogni elemento della lista contiene un valore e il riferimento al prossimo elemento
+Implementate i metodi removeFirst e addFirst
+
+//ESERCIZIO 2
+Progettate una classe Pila generica
+Come una pila di piatti, è possibile inserire un elemento solo in cima alla pila, ed è possibile solo rimuovere il primo elemento
+
+Implementare i metodi
+push – che inserisce un elemento in cima alla pila
+pop – che rimuove e restituisce il primo elemento della pila
+peek – che restituisce il primo elemento della pila senza rimuoverlo

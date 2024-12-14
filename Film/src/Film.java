@@ -4,14 +4,16 @@ public class Film {
     private int annoUscita;
     private Genere genere;
     private String regista;
-    private boolean disponibile = true;
-    private boolean visionando = false;
+    private boolean disponibile;
+    private boolean visionando;
 
-    public Film(String titolo, int annoUscita, String genere, String regista){
+    public Film(String titolo, int annoUscita, Genere genere, String regista){
         this.titolo = titolo;
         this.annoUscita = annoUscita;
-        this.genere = Genere.valueOf(genere);
+        this.genere = genere;
         this.regista = regista;
+        this.disponibile = true;
+        this.visionando = false;
     }
 
     public String getTitolo() {
@@ -31,8 +33,8 @@ public class Film {
     public Genere getGenere(){
         return genere;
     }
-    public void setGenere(String genere){
-        this.genere = Genere.valueOf(genere);
+    public void setGenere(Genere genere) {
+        this.genere = genere;
     }
 
     public String getRegista(){
@@ -52,16 +54,18 @@ public class Film {
     public boolean isVisionando() {
         return visionando;
     }
-    //public void setVisionando(boolean visionando) {
-    //    this.visionando = visionando;
-    //}
+    public void setVisionando(boolean visionando) {
+        this.visionando = visionando;
+    }
 
     public void infoFilm(){
+        System.out.println("--------------------");
         System.out.println("Titolo Film: " + getTitolo());
         System.out.println("Anno di uscita Film: " + getAnnoUscita());
         System.out.println("Genere Film: " + getGenere());
         System.out.println("Regista Film: " + getRegista());
         System.out.println("Disponibile:" + (isDisponibile() ? "SI" : "NO"));
+        System.out.println("--------------------");
     }
 
     public void visionaFilm(){
