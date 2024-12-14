@@ -1,12 +1,4 @@
-package ListaLinkata;/*Una classe linkedlist funziona in questo modo:
-    a differenza di una classe che ha un array(o comunque una collection come arraylist) come campo,
-    quindi un insieme di elementi come attributo (ad esempio Negozio --> listaProdotti[], Ditta --> listaTecnici[])
-    la LL non avrà una lista di elementi come attributo al suo interno...ma solo l'inizio della lista(la testa),
-    quindi 1 solo elemento...cioè sempre IL PRIMO ELEMENTO DELLA LISTA...
-    questo perchè ogni elemento della lista(quindi l'oggetto della classe interna Elemento)
-    conterrà come attributi sia un valore proprio, sia il riferimento all'oggetto Elemento successivo della lista.
-    E quindi, partendo sempre dall'inizio, scalando di elemento in elemento potrò scorrere tutti gli elementi della lista con questo meccanismo.
-*/
+package ListaLinkata;
 
 public class LinkedList<T> {
 
