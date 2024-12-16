@@ -114,7 +114,7 @@ public abstract class PersonaggioDrangonball implements Comparable<PersonaggioDr
     public Attakko scagliaAttacco(){
         int randomValue = random.nextInt(listAttakki.size());
         Attakko attakkoScagliato = listAttakki.get(randomValue);
-        System.out.println("Hai usato l'attacco: " + attakkoScagliato.getNome());
+        System.out.println("Attacco scagliato: " + attakkoScagliato.getNome());
         return attakkoScagliato;
     }
 

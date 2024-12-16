@@ -34,7 +34,7 @@ public class Main {
         sayan1.aggiungiAttakko(attakkoSayan2);
         attakkoFisicoSayan1.setDanno(sayan1.getForzaFisica());
 
-        Sayan sayan2 = new Sayan("Gohan bambino", "Pianeta Vegeta", 3, 3, attakkoFisicoSayan2 ,0.3, 0.3);
+        Sayan sayan2 = new Sayan("GohanBambino", "Pianeta Vegeta", 3, 3, attakkoFisicoSayan2 ,0.3, 0.3);
         sayan2.aggiungiAttakko(attakkoSayan1);
         sayan2.aggiungiAttakko(attakkoSayan3);
         attakkoFisicoSayan2.setDanno(sayan2.getForzaFisica());
@@ -59,16 +59,16 @@ public class Main {
         demone.aggiungiAttakko(attakkoDemone2);
         attakkoFisicoDemone.setDanno(demone.getForzaFisica());
 
-//        System.out.println(sayan1);
-//        System.out.println(sayan2);
-//        System.out.println(namecciano);
-//        System.out.println(alieno);
-//        System.out.println(cyborg);
-//        System.out.println(demone);
+        System.out.println(sayan1);
+        System.out.println(sayan2);
+        System.out.println(namecciano);
+        System.out.println(alieno);
+        System.out.println(cyborg);
+        System.out.println(demone);
 
-//        namecciano.compareTo(sayan2);
-//        alieno.compareTo(cyborg);
-//        sayan1.compareTo(demone);
+        namecciano.compareTo(sayan2);
+        alieno.compareTo(cyborg);
+        sayan1.compareTo(demone);
 
         //COMBATTIMENTO
 

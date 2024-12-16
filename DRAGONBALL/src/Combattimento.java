@@ -68,35 +68,59 @@ public class Combattimento {
         System.out.println("Il tuo avversario sarà personaggio: " + combattente2.getNome());
 
         //INIZIO IL COMBATTIMENTO
+        while (combattente1.getPuntiVita() > 0 && combattente2.getPuntiVita() > 0){
+            //TURNO COMBATTENTE 1
+            Attakko attakkoCombattente1 = combattente1.scagliaAttacco();
+            double probAttakkoASegno1 = attakkoCombattente1.getProbSuccessoAttakko() * combattente2.getProbSkivaAttakko();
+            double danno1 = 0.00;
+            if(probAttakkoASegno1 > 0.5){
+                danno1 = attakkoCombattente1.getDanno() * combattente2.getResistenzaFisica();
+                System.out.println("Hai inflitto un danno pari a " + danno1);
+            }
+            else{
+                System.out.println("Hai mancato l'attaco");
+            }
+            combattente2.setPuntiVita( (int) (combattente2.getPuntiVita() - danno1));
 
-        //SCAGLIO UN ATTACCO RANDOM
-        Attakko attakkoCombattente1 = combattente1.scagliaAttacco();
-        //CALCOLO LA PROBABILITà CHE L 'ATTACCO VADA A SEGNO
-        double probAttakkoASegno = attakkoCombattente1.getProbSuccessoAttakko() * combattente2.getProbSkivaAttakko();
-        System.out.println(probAttakkoASegno);
-        //CALCOLO IL DANNO
-        double danno = 0.00;
-        if(probAttakkoASegno > 0.5){
-            danno = attakkoCombattente1.getDanno() * combattente2.getResistenzaFisica();
-            System.out.println("Hai inflitto un danno pari a " + danno);
+            //TURNO COMBATTENTE 2
+            Attakko attakkoCombattente2 = combattente2.scagliaAttacco();
+            double probAttakkoASegno2 = attakkoCombattente2.getProbSuccessoAttakko() * combattente1.getProbSkivaAttakko();
+            double danno2 = 0.00;
+            if(probAttakkoASegno2 > 0.5){
+                danno2 = attakkoCombattente2.getDanno() * combattente1.getResistenzaFisica();
+                System.out.println("L'avversario ti ha inflitto un danno pari a " + danno2);
+            }
+            else{
+                System.out.println("L'avversario ha mancato l'attaco");
+            }
+            combattente1.setPuntiVita( (int) (combattente1.getPuntiVita() - danno2));
+
+            //TERMINA LO SCONTRO
+            if (combattente1.getPuntiVita() <= 0) {
+                System.out.println("Hai perso! " + combattente1.getNome() + " è stato sconfitto.");
+                break;
+            }
+            else if (combattente2.getPuntiVita() <= 0) {
+                System.out.println("Hai vinto! " + combattente2.getNome() + " è stato sconfitto.");
+            }
+
+
         }
-        //RIDUCO I PUNTI VITA
-        combattente2.setPuntiVita( (int) (combattente2.getPuntiVita() - danno));
-        if (combattente2.getPuntiVita() == 0){
-            System.out.println("Hai vinto");
-        }else{
-            System.out.println("Lo scontro non è terminato...continua a combattere");
-        }
+
+
 
     }
 
 
-
-
-
-
-
-
-
-
 }
+
+
+
+
+
+
+
+
+
+
+

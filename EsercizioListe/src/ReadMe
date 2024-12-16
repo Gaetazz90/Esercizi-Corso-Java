@@ -1,37 +1,13 @@
-Una classe linkedlist funziona in questo modo:
+LINKEDLIST
 
-    a differenza di una classe che ha un array(o comunque una collection come arraylist) come campo,
-    quindi un insieme di elementi come attributo (ad esempio Negozio --> listaProdotti[], Ditta --> listaTecnici[])
-    la LL non avrà una lista di elementi come attributo al suo interno...ma solo l'inizio della lista(la testa),
-    quindi 1 solo elemento...cioè sempre IL PRIMO ELEMENTO DELLA LISTA...
-    questo perchè ogni elemento della lista(quindi l'oggetto della classe interna Elemento)
-    conterrà come attributi sia un valore proprio, sia il riferimento all'oggetto Elemento successivo della lista.
-    E quindi,partendo sempre dall'inizio,scalando di elemento in elemento potrò scorrere tutti gli elementi della lista con questo meccanismo.
+Lista che, a differenza degli array, non contiene direttamente tutto il raggruppamento degli elementi,
+ma ogni elemento contiene sia il suo valore, che il riferimento a un altro nodo della lista,
+che può essere il successivo(nella FIFO) o il precedente(nella LIFO)
 
-LOGICA LIFO: LAST IN -FIRST OUT ---> PILA / STACK
-il nuovo elemento da aggiungere alla lista sarà posizionato sempre in cima alla lista --> addFirst
-e sarà quindi il primo a essere rimosso...sempre dall'inizio della lista --> removeFirst
-quindi l'ultimo a entrare è il primo ad uscire(o il primo che entra è l'ultimo che esce)
+LOGICA FIFO ---> FIRST IN FIRST OUT
+Rapprensenta il concetto di coda, ad esempio coda dal dottore
+quindi il primo che entra è il primo che esce, così come l'ultimo che arriva è l'ultimo ad andarsene
 
-
-LOGICA FIFO: FIRST IN - FIRST ---> CODA / QUEUE
-il nuovo elemento da aggiungere alla lista verrà posizionato sempre alla fine della lista --> addLast
-e sarà quindi anche l'ultimo a essere rimosso dalla lista --> removeFirst
-quindi l'ultimo ad entrare è l'ultimo ad uscire(o il primo che entra è il primo che esce)
-
-
-//ESERCIZIO 1
-Progettate una classe ListaLinkata generica
-
-Ogni elemento della lista contiene un valore e il riferimento al prossimo elemento
-Implementate i metodi removeFirst e addFirst
-
-//ESERCIZIO 2
-Progettate una classe Pila generica
-Come una pila di piatti, è possibile inserire un elemento solo in cima alla pila, ed è possibile solo rimuovere il primo elemento
-
-Implementare i metodi
-push – che inserisce un elemento in cima alla pila
-pop – che rimuove e restituisce il primo elemento della pila
-peek – che restituisce il primo elemento della pila senza rimuoverlo
-
+LOGICA LIFO ---> LAST IN FIRST OUT
+Rappresenta il concetto di pila, ad esempio pila di piatti
+quindi l'ultimo che arriva è il primo ad andarsene, così come il primo che entra è l'ultimo ad uscire.
