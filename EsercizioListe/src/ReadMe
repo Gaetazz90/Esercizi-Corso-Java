@@ -1,13 +1,15 @@
 LINKEDLIST
 
-Lista che, a differenza degli array, non contiene direttamente tutto il raggruppamento degli elementi,
+Lista che, a differenza degli arraylist, non contiene direttamente tutto il raggruppamento degli elementi,
 ma ogni elemento contiene sia il suo valore, che il riferimento a un altro nodo della lista,
 che può essere il successivo(nella FIFO) o il precedente(nella LIFO)
 
 LOGICA FIFO ---> FIRST IN FIRST OUT
 Rapprensenta il concetto di coda, ad esempio coda dal dottore
 quindi il primo che entra è il primo che esce, così come l'ultimo che arriva è l'ultimo ad andarsene
+(Come riferimento a un altro elemento della lista si considera il nodo successivo)
 
 LOGICA LIFO ---> LAST IN FIRST OUT
 Rappresenta il concetto di pila, ad esempio pila di piatti
 quindi l'ultimo che arriva è il primo ad andarsene, così come il primo che entra è l'ultimo ad uscire.
+(Come riferimento a un altro elemento della lista si considera il nodo precedente)
